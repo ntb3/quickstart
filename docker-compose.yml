@@ -9,6 +9,7 @@ x-environment:
   PLAID_ENV: ${PLAID_ENV}
 services:
   go:
+    hostname: "backend"
     networks:
       - "quickstart"
     depends_on:
@@ -20,6 +21,7 @@ services:
     environment:
       <<: *QUICKSTART_ENVIRONMENT
   java:
+    hostname: "backend"
     networks:
       - "quickstart"
     depends_on:
@@ -31,6 +33,7 @@ services:
     environment:
       <<: *QUICKSTART_ENVIRONMENT
   node:
+    hostname: "backend"
     networks:
       - "quickstart"
     depends_on:
@@ -42,6 +45,7 @@ services:
     environment:
       <<: *QUICKSTART_ENVIRONMENT
   python:
+    hostname: "backend"
     networks:
       - "quickstart"
     depends_on:
@@ -53,6 +57,7 @@ services:
     environment:
       <<: *QUICKSTART_ENVIRONMENT
   ruby:
+    hostname: "backend"
     networks:
       - "quickstart"
     depends_on:
